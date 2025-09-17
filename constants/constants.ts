@@ -1,0 +1,1 @@
+export let POMODORO_DURATION_MINUTES = 25;
