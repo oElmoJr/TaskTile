@@ -1,50 +1,47 @@
-# Welcome to your Expo app 👋
+# TaskTile 🍱
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> Um app de produtividade com foco em Pomodoro e gestão de tempo, construído com React Native e Expo.
 
-## Get started
+O TaskTile reinventa a gestão de tempo através de uma interface baseada no conceito de Bento Box, onde cada funcionalidade é um "bloco" organizado de forma limpa e funcional. O app foi projetado para ser totalmente dinâmico, permitindo que o usuário tenha controle total sobre sua área de trabalho.
 
-1. Install dependencies
+## 🍱 Design & Filosofia
 
+   Estética Bento Box: Interface organizada em blocos modulares, inspirada nos dashboards modernos e minimalistas.
+
+   Layout Totalmente Customizável: Liberdade para o usuário definir o posicionamento e o tamanho de cada bloco na tela, adaptando o app ao seu fluxo de trabalho único.
+
+## ✨ Funcionalidades
+
+- ⏱️ **Timer Pomodoro:** Ciclos de foco customizáveis.
+- ☕ **Smart Breaks:** Alternância automática entre descansos curtos e longos (após 4 ciclos).
+- 🔔 **Alertas Sonoros:** Notificação sonora ao finalizar um ciclo.
+- 🎨 **Progressão Visual:** Barra de progresso circular animada para acompanhamento real-time.
+- ⚙️ **Customização Total:** Ajuste os tempos de foco e descanso conforme sua necessidade.
+
+## 🚀 Tech Stack
+
+- **Framework:** [Expo](https://expo.dev/) (React Native)
+- **Linguagem:** TypeScript
+- **Navegação:** Expo Router (File-based routing)
+- **Gerenciamento de Estado:** Context API
+- **Animações:** React Native Circular Progress
+
+## 🛠️ Como rodar o projeto
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/oElmoJr/TaskTile.git
+   ```
+
+2. Instale as dependências:   
+      
    ```bash
    npm install
    ```
 
-2. Start the app
-
+3. Inicie o Expo Go:
    ```bash
    npx expo start
    ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+# 
+Feito com 💛 por [ElmoJr](https://elmojr.dev)
