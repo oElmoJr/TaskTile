@@ -2,9 +2,14 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import PomodoroBlockContent from './pomodoroBlockContent';
 
-const PomodoroBlock = () => {
+
+interface PomodoroBlockProps {
+  style?: ViewStyle;
+}
+
+const PomodoroBlock = ({ style }: PomodoroBlockProps) => {
   return (
-    <View style={styles.card}>
+    <View style={[styles.card, style]}>
       <PomodoroBlockContent />
     </View>
   );
@@ -15,7 +20,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderRadius: 20,
     padding: 20,
-    aspectRatio: 1,
+    flex: 1, 
+    width: '100%', 
     alignItems: 'center',
     justifyContent: 'center',
     shadowColor: '#000',
@@ -23,9 +29,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 5,
     elevation: 3,
-    margin: 60,
-    width: '95%',
-    height: 'auto',
   },
 });
 

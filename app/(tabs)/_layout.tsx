@@ -1,96 +1,27 @@
-import { Ionicons } from '@expo/vector-icons';
+import React from 'react';
 import { Tabs } from 'expo-router';
-import React, { createContext, useState } from 'react';
-
-// Crie e exporte o Contexto para ser usado em outras telas
-export const PomodoroContext = createContext({
-  pomodoroTime: 25,
-  setPomodoroTime: (time: number) => {},
-  shortBreakTime: 5,
-  setShortBreakTime: (time: number) => {},
-  longBreakTime: 15,
-  setLongBreakTime: (time: number) => {},
-  cyclesCompleted: 0,
-  setCyclesCompleted: (count: number) => {},
-});
+import { FontAwesome } from '@expo/vector-icons'; 
 
 export default function TabLayout() {
-  const [pomodoroTime, setPomodoroTime] = useState(25);
-  const [shortBreakTime, setShortBreakTime] = useState(5);
-  const [longBreakTime, setLongBreakTime] = useState(15);
-  const [cyclesCompleted, setCyclesCompleted] = useState(0);
-
   return (
-    <PomodoroContext.Provider
-      value={{
-        pomodoroTime,
-        setPomodoroTime,
-        shortBreakTime,
-        setShortBreakTime,
-        longBreakTime,
-        setLongBreakTime,
-        cyclesCompleted,
-        setCyclesCompleted,
-      }}
-    >
-      <Tabs
-        screenOptions={{
-          headerShown: false,
-          tabBarShowLabel: false,
-          tabBarStyle: {
-            backgroundColor: '#ffffff',
-            height: 60,
-            shadowColor: '#000',
-            shadowOffset: { width: 0, height: -2 },
-            shadowOpacity: 0.05,
-            shadowRadius: 5,
-            elevation: 5,
-          },
-          tabBarItemStyle: {
-            flex: 1,
-            justifyContent: 'center',
-            alignItems: 'center',
-            marginTop: 10,
-          },
+    <Tabs screenOptions={{ 
+      tabBarActiveTintColor: '#8A2BE2', // Roxo combinando com seu tema
+      headerShown: false, // Geralmente a gente esconde o header padrão
+    }}>
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: 'Home',
+          tabBarIcon: ({ color }) => <FontAwesome name="home" size={24} color={color} />,
         }}
-      >
-        <Tabs.Screen
-          name="index"
-          options={{
-            tabBarIcon: ({ color, focused }) => (
-              <Ionicons
-                name={focused ? 'grid' : 'grid-outline'}
-                size={28}
-                color={focused ? '#333' : '#888'}
-              />
-            ),
-          }}
-        />
-        <Tabs.Screen
-          name="timer"
-          options={{
-            tabBarIcon: ({ color, focused }) => (
-              <Ionicons
-                name={focused ? 'time' : 'time-outline'}
-                size={28}
-                color={focused ? '#333' : '#888'}
-              />
-            ),
-          }}
-        />
-        <Tabs.Screen
-          name="settings"
-          options={{
-            tabBarIcon: ({ color, focused }) => (
-              <Ionicons
-                name={focused ? 'settings' : 'settings-outline'}
-                size={28}
-                color={focused ? '#333' : '#888'}
-              />
-            ),
-          }}
-        />
-      </Tabs>
-    </PomodoroContext.Provider>
+      />
+      <Tabs.Screen
+        name="settings" // Se o nome do arquivo for settings.tsx
+        options={{
+          title: 'Configurações',
+          tabBarIcon: ({ color }) => <FontAwesome name="gear" size={24} color={color} />,
+        }}
+      />
+    </Tabs>
   );
 }

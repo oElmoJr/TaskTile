@@ -1,12 +1,11 @@
-import { Stack } from 'expo-router';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { Slot } from 'expo-router';
+import { PomodoroProvider } from '../context/PomodoroContext'; // Importando do lugar certo!
 
 export default function RootLayout() {
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      </Stack>
-    </GestureHandlerRootView>
+    // ✨ O Provider abraça a aplicação inteira
+    <PomodoroProvider>
+      <Slot /> 
+    </PomodoroProvider>
   );
 }

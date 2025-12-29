@@ -1,8 +1,7 @@
 import { router } from 'expo-router';
 import React, { useContext, useState } from 'react';
 import { Alert, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import { PomodoroContext } from '../../app/(tabs)/_layout';
-
+import { PomodoroContext } from '../../context/PomodoroContext';
 const PomodoroSettings = () => {
   const { pomodoroTime, setPomodoroTime, shortBreakTime, setShortBreakTime, longBreakTime, setLongBreakTime } = useContext(PomodoroContext);
   
